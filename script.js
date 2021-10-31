@@ -3,8 +3,8 @@ function displayTime()
 {
   // Create a new Data object with the current date and time
   var date = new Date();
-  // Source: https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML
-  // Initalize time to the current time
+  // Source: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleString
+  // Initalize time to the current time as a formatted string
   var time = date.toLocaleTimeString();
 
   document.getElementById("time").innerHTML = "The current time is " + time + ".";
