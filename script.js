@@ -9,12 +9,15 @@ function displayTime()
 
   document.getElementById("time").innerHTML = "The current time is " + time + ".";
 
-  // Source: https://developer.mozilla.org/en-US/docs/Web/API/setInterval
-  // Update the displayed time by executing displayTime() every second
-  setInterval(displayTime, 1000);
+  // Prepare current Date() object for garbage collection
+  date = null;
+  time = null;
 }
 
 displayTime();
+// Source: https://developer.mozilla.org/en-US/docs/Web/API/setInterval
+// Update the displayed time by executing displayTime() every second
+setInterval(displayTime, 1000);
 
 /*
 Note that I use var instead of const because I want to be able to dynamically
