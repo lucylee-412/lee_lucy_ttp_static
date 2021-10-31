@@ -6,7 +6,9 @@ function displayTime()
   // Source: https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML
   // Initalize time to the current time
   var time = date.toLocaleTimeString();
+
   document.getElementById("time").innerHTML = "The current time is " + time + ".";
+
   // Source: https://developer.mozilla.org/en-US/docs/Web/API/setInterval
   // Update the displayed time by executing displayTime() every second
   setInterval(displayTime, 1000);
